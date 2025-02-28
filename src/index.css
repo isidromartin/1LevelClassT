@@ -7,5 +7,26 @@ body {
 }
 
 html {
-  font-size: 80%;
+  font-size: 60%;
+  font-family: "Geometos", "sans-serif";
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Geometos";
+  src: url("/fonts/Geometos.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplica la fuente en Tailwind */
+@layer base {
+  .font-geometos {
+    font-family: "Geometos", sans-serif;
+  }
 }

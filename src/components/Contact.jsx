@@ -34,7 +34,16 @@ const Contacto = () => {
   };
 
   return (
-    <section id="contacto" className="bg-[#091C2A] py-20 px-6">
+    <section
+      id="contacto"
+      className="bg-[#091C2A] py-20 px-6"
+      style={{
+        backgroundImage: "url('images/hero.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "repeat",
+      }}
+    >
       <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Columna Izquierda: Información de Contacto */}
         <motion.div
@@ -49,10 +58,10 @@ const Contacto = () => {
           </h2>
           <div className="w-32 h-1 bg-[#E1C2B3] mx-auto md:ml-0 mt-3"></div>
 
-          <p className="text-lg text-[#E1C2B3] leading-relaxed">
+          {/* <p className="text-lg text-[#E1C2B3] leading-relaxed">
             Para consultas, reservas y eventos, contáctanos a través de nuestros
             canales:
-          </p>
+          </p> */}
 
           <div className="space-y-4 text-lg">
             <div className="text-[#E1C2B3] hover:text-white transition duration-300 flex items-center justify-center md:justify-start space-x-4">
@@ -104,7 +113,7 @@ const Contacto = () => {
 
         {/* Columna Derecha: Formulario */}
         <motion.div
-          className="bg-[#e1c2b3e] text-[#E1C2B3] rounded-xl shadow-xl p-10 w-full"
+          className="bg-[#e1c2b3e] text-[#E1C2B3] rounded-xl p-10 w-full"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -160,7 +169,7 @@ const Contacto = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              {loading ? "Enviando..." : "Enviar Mensaje →"}
+              {loading ? "Enviando..." : "Enviar Mensaje"}
             </motion.button>
           </form>
         </motion.div>

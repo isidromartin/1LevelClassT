@@ -2,14 +2,11 @@ import { useEffect, useRef } from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 // import Hero from "./components/Hero/Hero";
-// import HeroDefault from "./components/Hero/HeroDefault";
-import HeroMinimal from "./components/Hero/HeroMinimal";
-// import HeroModern from "./components/Hero/HeroModern";
+import HeroDefault from "./components/Hero/HeroDefault";
+import HeroVideo from "./components/Hero/HeroVideo";
+import HeroModern from "./components/Hero/HeroModern";
 import About2 from "./components/About2";
-import Menu from "./components/Menu";
-import Menu2 from "./components/Menu2";
-import Catering from "./components/Catering";
-import Testimonials from "./components/Testimonials";
+import Eventos from "./components/Eventos";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./index.css";
@@ -42,8 +39,17 @@ function App() {
       {/* <Navbar /> */}
       <main>
         <section id="hero">
-          <HeroMinimal />
+          <HeroModern />
         </section>
+        <div className="relative w-full flex items-center justify-center z-40">
+          <div className="border-t border-gray-400 w-1/4"></div>
+          <img
+            src="images/lgR.png"
+            alt="Logo Divisor"
+            className="h-12 mx-4 bg-transparent"
+          />
+          <div className="border-t border-gray-400 w-1/4"></div>
+        </div>
         <section id="about">
           <About2 />
         </section>
@@ -56,30 +62,14 @@ function App() {
           />
           <div className="border-t border-gray-400 w-1/4"></div>
         </div>
-        <section id="menu">
-          <Menu />
+        <section id="eventos">
+          <Eventos />
         </section>
-        <div className="absolute w-full flex items-center justify-center z-40">
-          <div className="border-t border-gray-400 w-1/4"></div>
-          <img
-            src="images/lgR.png"
-            alt="Logo Divisor"
-            className="h-12 mx-4 bg-transparent"
-          />
-          <div className="border-t border-gray-400 w-1/4"></div>
-        </div>
-        <section id="testimonials">
-          <Testimonials />
+
+        <section id="heroVideo">
+          <HeroVideo />
         </section>
-        <div className="absolute w-full flex items-center justify-center z-40">
-          <div className="border-t border-gray-400 w-1/4"></div>
-          <img
-            src="images/lgR.png"
-            alt="Logo Divisor"
-            className="h-12 mx-4 bg-transparent"
-          />
-          <div className="border-t border-gray-400 w-1/4"></div>
-        </div>
+
         <section id="contact">
           <Contact />
         </section>

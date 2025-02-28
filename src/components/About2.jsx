@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Crown, CalendarCheck, Handshake } from "lucide-react"; // Íconos de lujo
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-[#E1C2B3]">
             Sobre Nosotros
           </h2>
-          <div className="w-16 h-1 bg-[#B49453] mx-auto mt-3"></div>
+          <div className="w-16 h-1 bg-primary mx-auto mt-3"></div>
         </motion.div>
 
         {/* Texto Descriptivo */}
@@ -27,60 +28,61 @@ const About = () => {
         >
           En <span className="font-bold">1LevelClass</span>, ayudamos a marcas y
           organizadores de eventos a elevar su imagen y exclusividad
-          proporcionando un equipo selecto. Nos aseguramos de que cada evento
-          refleje <span className="font-bold">elegancia y distinción</span>.
+          proporcionando un equipo selecto.
         </motion.p>
       </div>
 
-      {/* Beneficios en columnas */}
-      <div className="container mx-auto mt-12 grid md:grid-cols-3 gap-6 text-center">
-        <motion.div
-          className="bg-[#3A2E29] p-6 rounded-xl shadow-lg transition-transform hover:scale-105 border border-[#B49453]"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold text-[#E1C2B3]">
-            🌟 Presencia Exclusiva
-          </h3>
-          <p className="text-lg text-[#E1C2B3] mt-3">
-            Perfiles seleccionados para aportar sofisticación y carisma a
-            eventos de lujo.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="bg-[#3A2E29] p-6 rounded-xl shadow-lg transition-transform hover:scale-105 border border-[#B49453]"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold text-[#E1C2B3]">
-            ✨ Eventos Exclusivos
-          </h3>
-          <p className="text-lg text-[#E1C2B3] mt-3">
-            Trabajamos en los eventos más exclusivos, desde moda hasta congresos
-            de lujo.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="bg-[#3A2E29] p-6 rounded-xl shadow-lg transition-transform hover:scale-105 border border-[#B49453]"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold text-[#E1C2B3]">
-            🎯 Atención Personalizada
-          </h3>
-          <p className="text-lg text-[#E1C2B3] mt-3">
-            Gestión 24/7 para garantizar una organización impecable en cada
-            evento.
-          </p>
-        </motion.div>
+      {/* Beneficios con iconos finos, fondos transparentes y diseño elegante */}
+      <div className="container mx-auto mt-12 flex flex-wrap justify-center gap-6 text-center">
+        {[
+          {
+            title: "Presencia Exclusiva",
+            icon: (
+              <Crown
+                size={50}
+                strokeWidth={1.5}
+                className="text-primary mb-4"
+              />
+            ),
+          },
+          {
+            title: "Eventos Exclusivos",
+            icon: (
+              <CalendarCheck
+                size={50}
+                strokeWidth={1.5}
+                className="text-primary mb-4"
+              />
+            ),
+          },
+          {
+            title: "Atención Personalizada",
+            icon: (
+              <Handshake
+                size={50}
+                strokeWidth={1.5}
+                className="text-primary mb-4"
+              />
+            ),
+          },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            className="p-12 rounded-xl shadow-xl transition-all duration-500 hover:scale-105 
+                 border border-primary/50 flex flex-col items-center justify-center h-full 
+                 w-full md:w-1/2 lg:w-1/3 bg-[rgba(225,194,179,0.15)] backdrop-blur-md"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 * index }}
+            viewport={{ once: true }}
+          >
+            {/* Ícono elegante */}
+            {item.icon}
+            <h3 className="text-2xl font-semibold text-primary">
+              {item.title}
+            </h3>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

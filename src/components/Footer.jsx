@@ -64,7 +64,7 @@ export default function Footer() {
                     Eventos
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="testimonials"
                     smooth={true}
@@ -74,7 +74,7 @@ export default function Footer() {
                   >
                     Testimonios
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to="contacto"
@@ -111,7 +111,7 @@ export default function Footer() {
                 <FaInstagram />
               </a>
               <a
-                href="https://www.instagram.com/1levelclass/"
+                href="https://wa.me/34656349954"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#E1C2B3] hover:text-white transition duration-300 text-2xl"

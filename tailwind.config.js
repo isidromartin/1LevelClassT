@@ -5,12 +5,12 @@ export default {
     extend: {
       colors: {
         primary: "#E1C2B3",
-        secondary: "#E1C2B3", // Marrón elegante
+        secondary: "#5B242A", // Marrón elegante
         background: "#091C2A",
         dark: "#091C2A", // Gris oscuro
       },
       fontFamily: {
-        heading: ["Geometros", "sans-serif"],
+        heading: ["Geometos", "sans-serif"],
         body: ["Poppins", "sans-serif"],
       },
     },

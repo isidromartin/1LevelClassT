@@ -21,10 +21,10 @@ const HeroMinimal = () => {
       </motion.video>
 
       {/* Capa oscura semitransparente para mejorar visibilidad */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
 
       {/* Contenido con Parallax */}
-      <div className="relative z-10">
+      {/* <div className="relative z-10">
         <motion.h1
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-bold drop-shadow-2xl tracking-wide"
           style={{ y: parallaxText }}
@@ -39,7 +39,7 @@ const HeroMinimal = () => {
           Not just a pretty face, but the talent and dedication to elevate your
           brand to the next level.
         </motion.p>
-      </div>
+      </div> */}
     </section>
   );
 };
