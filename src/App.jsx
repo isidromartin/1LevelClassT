@@ -10,23 +10,9 @@ import Eventos from "./components/Eventos";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./index.css";
-import gsap from "gsap";
+import Cookies from "./components/Cookies";
 
 function App() {
-  const gsapRef = useRef(false);
-
-  useEffect(() => {
-    if (!gsapRef.current) {
-      gsapRef.current = true;
-      gsap.from("section", {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        stagger: 0.3,
-      });
-    }
-  }, []);
-
   return (
     <HelmetProvider>
       <Helmet>
@@ -79,6 +65,7 @@ function App() {
       </main>
 
       <Footer />
+      <Cookies />
     </HelmetProvider>
   );
 }
