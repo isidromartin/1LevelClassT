@@ -5,22 +5,18 @@ const events = [
   {
     title: "Eventos en restaurantes",
     desc: "Nuestra agencia eleva la imagen de restaurantes de lujo, atrayendo un público exclusivo, mejorando la experiencia y potenciando su visibilidad en redes y eventos especiales.",
-    img: "images/ev4.jpg",
   },
   {
     title: "Eventos de moda y marcas de lujo",
     desc: "Nuestra agencia potencia eventos de moda al aportar un toque de elegancia y dinamismo, conectando con un público selecto y maximizando la visibilidad y prestigio de cada marca.",
-    img: "images/ev3.jpg",
   },
   {
     title: "Eventos deportivos",
     desc: "Nuestra agencia transforma la experiencia, aportando una imagen sofisticada y dinámica que eleva la visibilidad del evento, atrae patrocinadores y fideliza a los aficionados.",
-    img: "images/ev2.jpg",
   },
   {
     title: "Ferias y congresos de lujo",
     desc: "Nuestra agencia potencia ferias y congresos de lujo al realzar la imagen del evento, generar conexiones estratégicas y garantizar experiencias inolvidables.",
-    img: "images/ev1.jpg",
   },
 ];
 
@@ -67,15 +63,6 @@ export default function Events() {
             transition={{ duration: 0.8, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            {/* Imagen de fondo con overlay */}
-            <div className="absolute inset-0 opacity-25">
-              <img
-                src={event.img}
-                alt={event.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
             {/* Overlay más sutil para mejorar visibilidad de la imagen */}
             <div className="absolute inset-0 bg-black/20"></div>
 
@@ -84,16 +71,16 @@ export default function Events() {
               {/* Icono dinámico basado en el evento */}
               <div className="mb-4 text-[#E1C2B3]">
                 {index % 3 === 0 ? (
-                  <CalendarHeart size={56} strokeWidth={1.5} />
+                  <CalendarHeart size={30} strokeWidth={1} />
                 ) : index % 3 === 1 ? (
-                  <Star size={56} strokeWidth={1.5} />
+                  <Star size={30} strokeWidth={1} />
                 ) : (
-                  <MapPin size={56} strokeWidth={1.5} />
+                  <MapPin size={30} strokeWidth={1} />
                 )}
               </div>
 
               {/* Título del evento */}
-              <h3 className="text-2xl font-semibold text-primary">
+              <h3 className="mt-2 text-xl font-medium text-primary">
                 {event.title}
               </h3>
             </div>

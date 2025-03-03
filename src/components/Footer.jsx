@@ -3,7 +3,15 @@ import { Link } from "react-scroll";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#091C2A] text-[#E1C2B3] py-12 px-6 text-center">
+    <footer
+      className="text-[#E1C2B3] py-12 px-6 text-center"
+      style={{
+        backgroundImage: "url('images/hero.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "repeat",
+      }}
+    >
       <div className="container mx-auto">
         {/* Logo y nombre */}
         <div className="pb-6">
