@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         heading: ["Geometos", "sans-serif"],
         body: ["Poppins", "sans-serif"],
+        cookies: ["Inter", "sans-serif"],
       },
     },
   },
